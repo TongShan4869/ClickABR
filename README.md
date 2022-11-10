@@ -103,4 +103,4 @@ To show the click-evoked ABR, we usually plot the time range [-10, 30] ms. Since
 
 The final click-ABR should looks like this figure:
 
-![Click ABR](click_fig.png)
+![Click ABR](https://github.com/maddoxlab/ClickABR/blob/main/click_fig.png)
