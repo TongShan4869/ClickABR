@@ -4,6 +4,10 @@ Hi, this is a practice project for you to get familiar with deriving click-evoke
 
 We will go through the analysis step-by-step.
 
+>[!NOTE]
+>An example implementing tutorial can be found in notebook [`click_data_analysis.ipynb`](https://github.com/maddoxlab/ClickABR/blob/main/click_data_analysis.ipynb).
+> An example python script implenting whole dataset can be found in [`click_data_analysis.py`](https://github.com/maddoxlab/ClickABR/blob/main/click_data_analysis.py)
+
 ## Set up Python3 environment
 
 1. Download Anaconda3
