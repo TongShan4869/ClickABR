@@ -22,7 +22,7 @@ We will go through the analysis step-by-step.
 
 # Dataset description
 ## Click waveform dataset
-Clicks are generated from Poisson process with a rate of 40/s. There are ten trials of click data that are presented, each contains 1-min long clicks.
+Clicks are generated from Poisson process with a rate of **40/s**. There are ten trials of click data that are presented, each contains **1-min long** clicks.
 
 
 Source: `/click_waveform_datast`
@@ -68,8 +68,8 @@ eeg_raw = mne.io.read_raw_brainvision(eeg_vhdr_path, preload=True)
 ## Preprocessing
 [`scipy`](https://scipy.org/) is used for filtering.
 
-1. High-pass the EEG at 0.1 Hz (or 1 Hz) to filter out slow drifts.
-2. Notch filter at 60, 180, and 540 Hz to filter out power line noise. The three frequencies used here is for this specific EEG dataset. For your own data, you can use `eeg_raw.plot_psd()` function to plot the psd of the raw EEG, and it is easy to spot the noise.
+1. High-pass the EEG at **0.1 Hz** (or **1 Hz**) to filter out slow drifts.
+2. Notch filter at **60, 180, and 540 Hz** to filter out power line noise. The three frequencies used here is for this specific EEG dataset. For your own data, you can use `eeg_raw.plot_psd()` function to plot the psd of the raw EEG, and it is easy to spot the noise.
 
 
 ## Epoching
@@ -107,7 +107,7 @@ The cross-correlation in time domain is equivalent to the multiplication of FFT(
 ## Get the Averaged Click ABR
 We now have the click-evoked ABR for each trial. But what we need is the averaged ABR for that subject. Therefore, we need take the mean of the 10 trials. 
 
-The ABR we get is the sum of click ABR through the trial, which is actually (40 clicks/s * 60 s) times the ABR for a single click. So we then need to devide the amplitude of the ABR by (40*60).
+The ABR we get is the sum of click ABR through the trial, which is actually (40 clicks/s * 60 s) times the ABR for a single click. So we then need to devide the amplitude of the ABR by **40*60**.
 
 To show the click-evoked ABR, we usually plot the time range [-10, 30] ms. Since the derived ABR is circular, we can concatenate the last 10 ms and the first 30 ms.
 
